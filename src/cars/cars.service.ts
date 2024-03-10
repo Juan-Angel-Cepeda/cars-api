@@ -9,27 +9,27 @@ import { CreateCarDto, UpdateCarDto} from './dto';
 export class CarsService {
     //logica de negocio reutilizable en el servicio
     private cars:Car[] = [
-        {
-            //utiliza la v4 de uuid
-            id:uuid(),
-            brand:'Toyota',
-            model:'Corolla'
-        },
-        {
-            id:uuid(),
-            brand:'Honda',
-            model:'Civic'
-        },
-        {
-            id:uuid(),
-            brand:'BMW',
-            model:'250i'
-        },
-        {
-            id:uuid(),
-            brand:'Jeep',
-            model:'Cherokee'
-        }
+       // {
+       //     //utiliza la v4 de uuid
+       //     id:uuid(),
+       //     brand:'Toyota',
+       //     model:'Corolla'
+       // },
+       // {
+       //     id:uuid(),
+       //     brand:'Honda',
+       //     model:'Civic'
+       // },
+       // {
+       //     id:uuid(),
+       //     brand:'BMW',
+       //     model:'250i'
+       // },
+       // {
+       //     id:uuid(),
+       //     brand:'Jeep',
+       //     model:'Cherokee'
+       // }
     ]
 
     public findAll(){
@@ -79,6 +79,10 @@ export class CarsService {
         const car = this.findOneById(id);
         this.cars = this.cars.filter(car => car.id !== id);
         
+    }
+
+    fillCarsWithSeedData( cars:Car[]){
+        this.cars = cars
     }
 
 }
