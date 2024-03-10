@@ -51,6 +51,7 @@ export class BrandsService {
       return brand;
     });
 
+    return brandDB;
     //return `This action updates a #${id} brand`;
   }
 
